@@ -1,4 +1,4 @@
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 package:
   name: mppp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
-  sha256: 97bb5ff69374be82ea3134c1b797bd5f9d89ffbf362f3e62fea76106d04d8d2c
+  sha256: 0805afa8af939da284855848b5f1df3d4c80c4ded55940bc27942a946c202c13
 
 build:
   number: 0
