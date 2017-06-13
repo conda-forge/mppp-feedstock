@@ -9,8 +9,8 @@ cmake ^
     -DMPPP_BUILD_TESTS=yes ^
     ..
 
-cmake --build . --config Debug
+cmake --build . --config Release
 
 ctest
 
-cmake --build . --config Debug --target install
+cmake --build . --config Release --target install
