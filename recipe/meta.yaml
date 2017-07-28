@@ -9,7 +9,7 @@ source:
   sha256: 0805afa8af939da284855848b5f1df3d4c80c4ded55940bc27942a946c202c13
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and py<35]
   features:
     - vc14  # [win and py>=35]
@@ -22,12 +22,12 @@ requirements:
     - cmake
     - gmp                 # [unix]
     - mpir                # [win]
-    - mpfr
+    - mpfr 3.1.*
   run:
     - vc 14               # [win and py>=35]
     - gmp                 # [unix]
     - mpir                # [win]
-    - mpfr
+    - mpfr 3.1.*
 
 
 test:
