@@ -1,4 +1,4 @@
-{% set version = "0.4" %}
+{% set version = "0.5" %}
 
 package:
   name: mppp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
-  sha256: 0c9c7049a0041c167c2f11f7e8eb029636852bdaaf4e4a9dbead5b46ff4e6480
+  sha256: f9c0371724f3f336d2f1373c25d0307c55cd5b3a598582190c250f789c1d286f
 
 build:
   number: 0
@@ -20,12 +20,12 @@ requirements:
     - vc 14               # [win and py>=35]
     - toolchain
     - cmake
-    - gmp                 # [unix]
+    - gmp 6.1.*           # [unix]
     - mpir                # [win]
     - mpfr 3.1.*
   run:
     - vc 14               # [win and py>=35]
-    - gmp                 # [unix]
+    - gmp 6.1.*           # [unix]
     - mpir                # [win]
     - mpfr 3.1.*
 
