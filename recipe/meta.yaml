@@ -1,4 +1,4 @@
-{% set version = "0.6" %}
+{% set version = "0.8" %}
 
 package:
   name: mppp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
-  sha256: 7c63575b4b8a840669302edcd9cdb6e39f3dc0bb5eada5b68e01b8ffe3ff0f58
+  sha256: d751cb019931137a861e8ff5cbe3eafcc4298845a9d1482fd00af36035e91418
 
 build:
   number: 0
@@ -40,7 +40,7 @@ about:
   home: https://bluescarni.github.io/mppp/
   license: MPL2
   license_file: COPYING
-  summary: 'A C++11 header-only library for multiprecision arithmetic'
+  summary: 'A modern C++ library for multiprecision arithmetic'
 
 extra:
   recipe-maintainers:
