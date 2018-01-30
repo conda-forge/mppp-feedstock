@@ -7,7 +7,7 @@ Package license: MPL2
 
 Feedstock license: BSD 3-Clause
 
-Summary: A C++11 header-only library for multiprecision arithmetic
+Summary: A modern C++ library for multiprecision arithmetic
 
 
 
