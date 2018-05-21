@@ -14,14 +14,16 @@ Summary: A modern C++ library for multiprecision arithmetic
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/mppp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mppp-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/mppp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/mppp-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/mppp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/mppp-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/mppp-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/mppp-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/mppp-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/mppp-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mppp/badges/version.svg)](https://anaconda.org/conda-forge/mppp)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mppp/badges/downloads.svg)](https://anaconda.org/conda-forge/mppp)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mppp-green.svg)](https://anaconda.org/conda-forge/mppp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mppp.svg)](https://anaconda.org/conda-forge/mppp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mppp.svg)](https://anaconda.org/conda-forge/mppp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mppp.svg)](https://anaconda.org/conda-forge/mppp) |
 
 Installing mppp
 ===============
