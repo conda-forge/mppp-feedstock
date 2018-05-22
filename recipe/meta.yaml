@@ -10,26 +10,20 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py<35]
-  features:
-    - vc14  # [win and py>=35]
+  skip: true   # [win and vc<14]
 
 requirements:
   build:
-    - python              # [win]
-    - vc 14               # [win and py>=35]
-    - toolchain
+    - {{ compiler('cxx') }}
     - cmake
-    - gmp 6.1.*           # [unix]
+  host:
+    - gmp                 # [unix]
     - mpir                # [win]
-    - mpfr 3.1.*
+    - mpfr
   run:
-    - vc 14               # [win and py>=35]
-    - gmp 6.1.*           # [unix]
+    - gmp                 # [unix]
     - mpir                # [win]
-    - mpfr 3.1.*
-    - libgfortran         # [linux]
-
+    - mpfr
 
 test:
   commands:
