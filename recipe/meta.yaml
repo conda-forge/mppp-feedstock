@@ -28,7 +28,7 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/include/mp++/mp++.hpp               # [unix]
-    - if not exist %LIBRARY_INC%\\mp++\\mp++.hpp exit 1   # [win]
+    - if not exist %LIBRARY_INC%\mp++\mp++.hpp exit 1     # [win]
 
 about:
   home: https://bluescarni.github.io/mppp/
