@@ -1,4 +1,4 @@
-{% set version = "0.10" %}
+{% set version = "0.11" %}
 
 package:
   name: mppp
@@ -6,35 +6,29 @@ package:
 
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
-  sha256: 8dd81aa29358772d70e394fe217bd7dc928a8d2813a1ec03f28f1cc1342cd553
+  sha256: 07646290f483a9f0c02846514576daba9f5975115752cc4b0666097221e1b5e7
 
 build:
   number: 0
-  skip: true  # [win and py<35]
-  features:
-    - vc14  # [win and py>=35]
+  skip: true   # [win and vc<14]
 
 requirements:
   build:
-    - python              # [win]
-    - vc 14               # [win and py>=35]
-    - toolchain
+    - {{ compiler('cxx') }}
     - cmake
-    - gmp 6.1.*           # [unix]
+  host:
+    - gmp                 # [unix]
     - mpir                # [win]
-    - mpfr 3.1.*
+    - mpfr
   run:
-    - vc 14               # [win and py>=35]
-    - gmp 6.1.*           # [unix]
+    - gmp                 # [unix]
     - mpir                # [win]
-    - mpfr 3.1.*
-    - libgfortran         # [linux]
-
+    - mpfr
 
 test:
   commands:
     - test -f $PREFIX/include/mp++/mp++.hpp               # [unix]
-    - if not exist %LIBRARY_INC%\\mp++\\mp++.hpp exit 1   # [win]
+    - if not exist %PREFIX%\\Library\\include\\mp++\\mp++.hpp exit 1   # [win]
 
 about:
   home: https://bluescarni.github.io/mppp/
