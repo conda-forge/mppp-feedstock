@@ -3,7 +3,7 @@ cxx_compiler:
 gmp:
 - '6'
 mpfr:
-- '3'
+- '4'
 pin_run_as_build:
   gmp:
     max_pin: x
@@ -13,3 +13,6 @@ pin_run_as_build:
     max_pin: x
 vc:
 - '14'
+zip_keys:
+- - cxx_compiler
+  - vc

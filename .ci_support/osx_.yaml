@@ -9,7 +9,7 @@ macos_machine:
 macos_min_version:
 - '10.9'
 mpfr:
-- '3'
+- '4'
 pin_run_as_build:
   gmp:
     max_pin: x
