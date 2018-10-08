@@ -1,12 +1,12 @@
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
 cxx_compiler:
 - vs2015
-gmp:
-- '6'
 mpfr:
 - '4'
 pin_run_as_build:
-  gmp:
-    max_pin: x
   mpfr:
     max_pin: x
   vc:
@@ -14,5 +14,5 @@ pin_run_as_build:
 vc:
 - '14'
 zip_keys:
-- - cxx_compiler
-  - vc
+- - vc
+  - cxx_compiler
