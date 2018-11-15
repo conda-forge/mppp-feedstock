@@ -11,8 +11,8 @@ cmake \
     -DMPPP_BUILD_TESTS=yes \
     ..
 
-make
+make -j${CPU_COUNT}
 
-ctest
+ctest --output-on-failure
 
 make install
