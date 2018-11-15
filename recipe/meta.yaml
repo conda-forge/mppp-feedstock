@@ -1,4 +1,4 @@
-{% set version = "0.11" %}
+{% set version = "0.12" %}
 
 package:
   name: mppp
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
-  sha256: 07646290f483a9f0c02846514576daba9f5975115752cc4b0666097221e1b5e7
+  sha256: ea8ace6b5d4df4dd96f003f4130d159ea488e766e6176b8d2758928d1108725e
 
 build:
   number: 1000
@@ -14,6 +14,7 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
   host:
