@@ -19,7 +19,7 @@ cmake \
     -DMPPP_BUILD_TESTS=yes \
     ..
 
-make -j${CPU_COUNT}
+make -j${CPU_COUNT} VERBOSE=1
 
 ctest --output-on-failure -E integer_hash
 
