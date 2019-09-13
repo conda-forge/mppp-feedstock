@@ -2,7 +2,7 @@ mkdir build
 cd build
 
 cmake ^
-    -G "%CMAKE_GENERATOR%" ^
+    -G "NMake Makefiles" ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
