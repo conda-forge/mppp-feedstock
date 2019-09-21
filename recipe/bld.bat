@@ -13,7 +13,7 @@ cmake ^
 
 cmake --build .
 
-set PATH=%PATH%;%CD%\Release
+set PATH=%PATH%;%CD%
 
 ctest
 
