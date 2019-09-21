@@ -10,6 +10,7 @@ mkdir build
 cd build
 
 cmake \
+    -DCMAKE_CXX_STANDARD=17 \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
@@ -18,7 +19,7 @@ cmake \
     -DMPPP_BUILD_TESTS=yes \
     ..
 
-make -j${CPU_COUNT}
+make -j${CPU_COUNT} VERBOSE=1
 
 ctest --output-on-failure -E integer_hash
 
