@@ -17,6 +17,7 @@ cmake \
     -DMPPP_WITH_MPFR=yes \
     -DMPPP_WITH_QUADMATH=$ENABLE_QUADMATH \
     -DMPPP_BUILD_TESTS=yes \
+    -DMPPP_INSTALL_LIBDIR=lib \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1
