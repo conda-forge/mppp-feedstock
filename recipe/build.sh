@@ -2,6 +2,8 @@
 
 if [[ "$(uname)" == "Darwin" ]]; then
     export ENABLE_QUADMATH=no
+    # Workaround for missing C++17 feature when building the tests.
+    export CXXFLAGS="$CXXFLAGS -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS"
 else
     export ENABLE_QUADMATH=yes
 fi
