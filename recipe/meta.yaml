@@ -9,7 +9,7 @@ source:
   sha256: 828b1b719c915e021641c6837d537a5de0c9f6977ec5abd4046d1be1cd1de351
 
 build:
-  number: 3
+  number: 4
   run_exports:
     # SO name changes at minor rev bumps.
     - {{ pin_subpackage('mppp', max_pin='x.x') }}
@@ -25,8 +25,7 @@ requirements:
     - mpir                # [win]
     - mpfr
   run:
-    - gmp                 # [unix]
-    - mpir                # [win]
+    # NOTE: gmp/mpir use run_exports.
     - mpfr
 
 test:
@@ -36,7 +35,7 @@ test:
 
 about:
   home: https://bluescarni.github.io/mppp/
-  license: MPL2
+  license: MPL-2.0
   license_file: COPYING
   summary: 'A modern C++ library for multiprecision arithmetic'
 
