@@ -9,7 +9,7 @@ source:
   sha256: 05c8585ed76be1d230b2a5243dd911481e8be9bd204433fa8e6cfe93d6ac0b15
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # SO name changes at minor rev bumps.
     - {{ pin_subpackage('mppp', max_pin='x.x') }}
