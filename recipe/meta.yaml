@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
   sha256: dde0cef4bb27c30b57a48a457fa9b10291d260c07064df009e29bf2b261c2a7e
+  patches:
+    - test_fix.diff
 
 build:
   number: 0
@@ -22,10 +24,12 @@ requirements:
     - cmake
   host:
     - gmp                 # [unix]
+    - libflint            # [unix]
+    - arb                 # [unix]
     - mpir                # [win]
     - mpfr
   run:
-    # NOTE: gmp/mpir use run_exports.
+    # NOTE: gmp/mpir, libflint and arb use run_exports.
     - mpfr
 
 test:
