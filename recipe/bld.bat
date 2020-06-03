@@ -3,6 +3,7 @@ cd build
 
 cmake ^
     -G "NMake Makefiles" ^
+    -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
@@ -10,10 +11,10 @@ cmake ^
     -DMPPP_BUILD_TESTS=yes ^
     ..
 
-cmake --build . --config Release
+cmake --build .
 
-set PATH=%PATH%;%CD%\Release
+set PATH=%PATH%;%CD%
 
 ctest
 
-cmake --build . --config Release --target install
+cmake --build . --target install
