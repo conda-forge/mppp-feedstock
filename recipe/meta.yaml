@@ -1,4 +1,4 @@
-{% set version = "0.19" %}
+{% set version = "0.20" %}
 
 package:
   name: mppp
@@ -6,9 +6,7 @@ package:
 
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
-  sha256: dde0cef4bb27c30b57a48a457fa9b10291d260c07064df009e29bf2b261c2a7e
-  patches:
-    - test_fix.diff
+  sha256: c736daeaac30e38e1c09a19d249209ad49f8ec92ab1315a8fb9a47cc1f54e607
 
 build:
   number: 0
@@ -28,9 +26,8 @@ requirements:
     - arb                 # [unix]
     - mpir                # [win]
     - mpfr
-  run:
-    # NOTE: gmp/mpir, libflint and arb use run_exports.
-    - mpfr
+    - mpc
+    # NOTE: gmp/mpir, mpfr, mpc, libflint and arb all use run_exports.
 
 test:
   commands:
