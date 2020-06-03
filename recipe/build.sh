@@ -9,8 +9,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
 else
     export ENABLE_QUADMATH=yes
     # Workaround for making the LTO machinery work on Linux.
-    export AR_CMAKE_SETTING="-DCMAKE_CXX_COMPILER_AR=$GCC_AR"
-    export RANLIB_CMAKE_SETTING="-DCMAKE_CXX_COMPILER_RANLIB=$GCC_RANLIB"
+    export AR_CMAKE_SETTING="-DCMAKE_CXX_COMPILER_AR=$GCC_AR -DCMAKE_C_COMPILER_AR=$GCC_AR"
+    export RANLIB_CMAKE_SETTING="-DCMAKE_CXX_COMPILER_RANLIB=$GCC_RANLIB -DCMAKE_C_COMPILER_RANLIB=$GCC_RANLIB"
 fi
 
 mkdir build
