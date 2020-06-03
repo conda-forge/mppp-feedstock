@@ -8,6 +8,7 @@ cmake ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DMPPP_WITH_MPFR=yes ^
+    -DMPPP_WITH_MPC=yes ^
     -DMPPP_BUILD_TESTS=yes ^
     ..
 

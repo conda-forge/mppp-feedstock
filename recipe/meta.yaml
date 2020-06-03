@@ -26,8 +26,9 @@ requirements:
     - arb                 # [unix]
     - mpir                # [win]
     - mpfr
+    - mpc
   run:
-    # NOTE: gmp/mpir, libflint and arb use run_exports.
+    # NOTE: gmp/mpir, mpc, libflint and arb use run_exports.
     - mpfr
 
 test:
