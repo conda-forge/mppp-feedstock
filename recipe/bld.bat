@@ -10,6 +10,7 @@ cmake ^
     -DMPPP_WITH_MPFR=yes ^
     -DMPPP_WITH_MPC=yes ^
     -DMPPP_BUILD_TESTS=yes ^
+    -DMPPP_ENABLE_IPO=yes ^
     ..
 
 cmake --build .
