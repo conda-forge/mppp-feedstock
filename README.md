@@ -5,7 +5,7 @@ Home: https://bluescarni.github.io/mppp/
 
 Package license: MPL-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A modern C++ library for multiprecision arithmetic
 

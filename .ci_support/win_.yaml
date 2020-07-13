@@ -1,5 +1,5 @@
 arb:
-- '2.17'
+- '2.18'
 c_compiler:
 - vs2017
 channel_sources:
