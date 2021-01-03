@@ -28,6 +28,9 @@ requirements:
     - mpfr
     - mpc
     # NOTE: gmp/mpir, mpfr, mpc, libflint and arb all use run_exports.
+    - boost-cpp
+  run:
+    - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
 
 test:
   commands:
