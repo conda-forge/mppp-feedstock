@@ -25,7 +25,7 @@ cmake ${CMAKE_ARGS} \
     -DMPPP_BUILD_TESTS=yes \
     -DMPPP_ENABLE_IPO=yes \
     -DMPPP_INSTALL_LIBDIR=lib \
-    .. || cat CMakeFiles/CMakeError.log
+    ..
 
 make -j${CPU_COUNT} VERBOSE=1
 
