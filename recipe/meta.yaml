@@ -1,4 +1,4 @@
-{% set version = "0.22" %}
+{% set version = "0.23" %}
 
 package:
   name: mppp
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
-  sha256: 92e34a393c7b6e61daec6a26827a2b73b9b61d961ab37bcabbf051cc7ff19ad2
+  sha256: 76f4ee484afae4dbe00f4b0bf91063e4d5dc3eb2bbf5d34ecf174821965d5910
 
 build:
-  number: 2
+  number: 0
   run_exports:
     # SO name changes at minor rev bumps.
     - {{ pin_subpackage('mppp', max_pin='x.x') }}
