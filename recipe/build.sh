@@ -5,7 +5,11 @@ if [[ "$target_platform" == osx-* ]]; then
     # Workaround for missing C++17 feature when building the tests.
     export CXXFLAGS="$CXXFLAGS -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS"
 else
-    export ENABLE_QUADMATH=yes
+    if [[ "$target_platform" == linux_64 ]]; then
+        export ENABLE_QUADMATH=yes
+    else
+        export ENABLE_QUADMATH=no
+    fi
 fi
 
 mkdir build
