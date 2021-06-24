@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
   sha256: 76f4ee484afae4dbe00f4b0bf91063e4d5dc3eb2bbf5d34ecf174821965d5910
+  patches:
+    - test_fix.diff
 
 build:
   number: 0
@@ -20,6 +22,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - make                # [unix]
   host:
     - gmp                 # [unix]
     - mpir                # [win]
