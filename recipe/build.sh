@@ -4,10 +4,16 @@ if [[ "$target_platform" == osx-* ]]; then
     export ENABLE_QUADMATH=no
     # Workaround for missing C++17 feature when building the tests.
     export CXXFLAGS="$CXXFLAGS -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS"
-elif [[ "$target_platform" == linux-aarch64 ||  "$target_platform" == linux-ppc64le ]]; then
+elif [[ "$target_platform" == linux-aarch64 ]]; then
     export ENABLE_QUADMATH=no
 else
     export ENABLE_QUADMATH=yes
+fi
+
+if [[ "$target_platform" == linux-ppc64le ]]; then
+    export ENABLE_IPO=no
+else
+    export ENABLE_IPO=yes
 fi
 
 mkdir build
@@ -25,7 +31,7 @@ cmake ${CMAKE_ARGS} \
     -DMPPP_WITH_BOOST_S11N=ON \
     -DBoost_NO_BOOST_CMAKE=ON \
     -DMPPP_BUILD_TESTS=yes \
-    -DMPPP_ENABLE_IPO=yes \
+    -DMPPP_ENABLE_IPO=$ENABLE_IPO \
     -DMPPP_INSTALL_LIBDIR=lib \
     ..
 
