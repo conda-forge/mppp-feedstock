@@ -2,7 +2,9 @@ mkdir build
 cd build
 
 cmake ^
-    -G "Visual Studio 16 2019" -A x64 ^
+    -G "Ninja" ^
+    -DCMAKE_C_COMPILER=clang-cl ^
+    -DCMAKE_CXX_COMPILER=clang-cl ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
