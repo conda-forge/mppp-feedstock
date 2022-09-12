@@ -9,11 +9,10 @@ source:
   sha256: 4dbfa68802d9a1365eda884f085418afc147d01b7a928e8333e4dcc1c3b3ce9e
 
 build:
-  number: 5
+  number: 6
   run_exports:
     # SO name changes at minor rev bumps.
     - {{ pin_subpackage('mppp', max_pin='x.x') }}
-  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -21,6 +20,8 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make                # [unix]
+    - clang               # [win]
+    - ninja               # [win]
   host:
     - gmp                 # [unix]
     - mpir                # [win]
