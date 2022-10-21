@@ -31,10 +31,6 @@ mpfr:
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
-  gmp:
-    max_pin: x
-  mpfr:
-    max_pin: x
 target_platform:
 - linux-aarch64
 zip_keys:
