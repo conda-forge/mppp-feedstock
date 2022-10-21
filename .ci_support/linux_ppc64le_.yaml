@@ -1,7 +1,5 @@
 arb:
 - '2.23'
-boost_cpp:
-- 1.78.0
 c_compiler:
 - gcc
 c_compiler_version:
@@ -18,15 +16,8 @@ cxx_compiler_version:
 - '10'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
-gmp:
-- '6'
 libflint:
 - '2.9'
-mpfr:
-- '4'
-pin_run_as_build:
-  boost-cpp:
-    max_pin: x.x.x
 target_platform:
 - linux-ppc64le
 zip_keys:
