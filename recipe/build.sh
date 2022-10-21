@@ -33,6 +33,7 @@ cmake ${CMAKE_ARGS} \
     -DMPPP_BUILD_TESTS=yes \
     -DMPPP_ENABLE_IPO=$ENABLE_IPO \
     -DMPPP_INSTALL_LIBDIR=lib \
+    -DMPPP_WITH_FMT=ON \
     ..
 
 make -j${CPU_COUNT} VERBOSE=1

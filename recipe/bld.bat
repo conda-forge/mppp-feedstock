@@ -16,6 +16,7 @@ cmake ^
     -DBoost_NO_BOOST_CMAKE=ON ^
     -DMPPP_BUILD_TESTS=yes ^
     -DMPPP_ENABLE_IPO=yes ^
+    -DMPPP_WITH_FMT=ON ^
     ..
 
 cmake --build .
