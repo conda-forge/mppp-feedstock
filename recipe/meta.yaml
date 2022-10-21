@@ -18,20 +18,20 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - cmake
+    - cmake >=3.8
     - make                # [unix]
     - clang               # [win]
     - ninja               # [win]
   host:
-    - gmp                 # [unix]
+    - gmp >=5             # [unix]
     - mpir                # [win]
     - arb
     - libflint
-    - mpfr
+    - mpfr >=3
     - mpc
     - fmt >=6.2
     # NOTE: gmp/mpir, mpfr, mpc, libflint, arb and fmt all use run_exports.
-    - boost-cpp
+    - boost-cpp >=1.60
   run:
     - {{ pin_compatible('boost-cpp', max_pin='x.x') }}
 
