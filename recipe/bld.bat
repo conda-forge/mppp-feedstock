@@ -2,10 +2,7 @@ mkdir build
 cd build
 
 cmake ^
-    -G "Ninja" ^
-    -DCMAKE_C_COMPILER=clang-cl ^
-    -DCMAKE_CXX_COMPILER=clang-cl ^
-    -DCMAKE_BUILD_TYPE=Release ^
+    -G "Visual Studio 17 2022" -A x64 ^
     -DCMAKE_CXX_STANDARD=17 ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
@@ -19,10 +16,11 @@ cmake ^
     -DMPPP_WITH_FMT=ON ^
     ..
 
-cmake --build .
+cmake --build . --config Release
 
-set PATH=%PATH%;%CD%
+set PATH=%PATH%;%CD%\Release
 
-ctest
+ctest --output-on-failure -j${CPU_COUNT} -V -C Release
 
-cmake --build . --target install
+cmake --build . --config Release --target install
+
