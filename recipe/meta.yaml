@@ -20,8 +20,6 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make                # [unix]
-    - clang               # [win]
-    - ninja               # [win]
   host:
     - gmp                 # [unix]
     - mpir                # [win]
