@@ -27,7 +27,7 @@ gmp:
 libboost_devel:
 - '1.82'
 libflint:
-- '2.9'
+- '3.0'
 mpfr:
 - '4'
 target_platform:
