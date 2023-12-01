@@ -1,4 +1,4 @@
-{% set version = "0.27" %}
+{% set version = "1.0.0" %}
 
 package:
   name: mppp
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/bluescarni/mppp/archive/v{{ version }}.tar.gz
-  sha256: a1e04f6605b3242d4361742159cf5ab273162fd7c105c2743a9bebcf44c846c3
+  sha256: e58b1a5fb8bdf095261eeb0861c3f46f96c71c4b043d19700e73ce3e4e639268
 
 build:
-  number: 2
+  number: 0
   run_exports:
     # SO name changes at minor rev bumps.
     - {{ pin_subpackage('mppp', max_pin='x.x') }}
@@ -24,11 +24,12 @@ requirements:
     - gmp                 # [unix]
     - mpir                # [win]
     - arb
-    - libflint
+    # NOTE: flint 3 has several breaking changes
+    # that will have to be addressed upstream.
+    - libflint <3
     - mpfr
     - mpc
     - fmt
-    # NOTE: gmp/mpir, mpfr, mpc, libflint, arb and fmt all use run_exports.
     - libboost-devel
   run:
 

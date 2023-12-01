@@ -16,11 +16,10 @@ cmake ^
     -DMPPP_WITH_FMT=ON ^
     ..
 
-cmake --build . --config Release
+cmake --build . --config Release -j%CPU_COUNT%
 
 set PATH=%PATH%;%CD%\Release
 
-ctest --output-on-failure -j${CPU_COUNT} -V -C Release
+ctest --output-on-failure -j%CPU_COUNT% -V -C Release
 
 cmake --build . --config Release --target install
-
