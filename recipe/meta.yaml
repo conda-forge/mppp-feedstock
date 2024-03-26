@@ -9,7 +9,7 @@ source:
   sha256: 2a537bc339726388fdda39905692d3df92fceee51d264e720e0e7ab7570bcdaf
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # SO name changes at minor rev bumps.
     - {{ pin_subpackage('mppp', max_pin='x.x') }}
@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - make                # [unix]
