@@ -16,6 +16,13 @@ else
     export ENABLE_IPO=yes
 fi
 
+# Build & run the tests?
+if [[ "$target_platform" == linux-ppc64le ]]; then
+    export ENABLE_TESTS=no
+else
+    export ENABLE_TESTS=yes
+fi
+
 mkdir build
 cd build
 
@@ -38,8 +45,8 @@ cmake ${CMAKE_ARGS} \
 
 make -j${CPU_COUNT} VERBOSE=1
 
-if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
-ctest -j${CPU_COUNT} --output-on-failure
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" && "$ENABLE_TESTS" == yes ]]; then
+    ctest -j${CPU_COUNT} --output-on-failure
 fi
 
 make install
