@@ -12,6 +12,8 @@ cxx_compiler:
 - vs2019
 fmt:
 - '11'
+gmp:
+- '6'
 libboost_devel:
 - '1.84'
 mpfr:
