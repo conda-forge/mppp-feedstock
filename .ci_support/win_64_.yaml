@@ -13,7 +13,7 @@ cxx_compiler:
 fmt:
 - '11'
 libboost_devel:
-- '1.84'
+- '1.86'
 mpfr:
 - '4'
 target_platform:
