@@ -8,7 +8,7 @@ cmake ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DMPPP_WITH_MPFR=yes ^
     -DMPPP_WITH_MPC=yes ^
-    -DMPPP_WITH_ARB=yes ^
+    -DMPPP_WITH_FLINT=yes ^
     -DMPPP_WITH_BOOST_S11N=ON ^
     -DBoost_NO_BOOST_CMAKE=ON ^
     -DMPPP_BUILD_TESTS=yes ^
