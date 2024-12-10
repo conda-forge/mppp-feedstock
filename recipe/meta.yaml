@@ -28,6 +28,7 @@ requirements:
     - mpc
     - fmt
     - libboost-devel
+    - winpthreads-devel      # [win]
   run:
 
 test:
