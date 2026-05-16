@@ -23,7 +23,7 @@ gmp:
 libboost_devel:
 - '1.90'
 libflint:
-- '3.3'
+- '3.5'
 mpfr:
 - '4'
 mppp:
