@@ -2,8 +2,6 @@
 
 if [[ "$target_platform" == osx-* ]]; then
     export ENABLE_QUADMATH=no
-    # Workaround for missing C++17 feature when building the tests.
-    export CXXFLAGS="$CXXFLAGS -DCATCH_CONFIG_NO_CPP17_UNCAUGHT_EXCEPTIONS"
 elif [[ "$target_platform" == linux-aarch64 ]]; then
     export ENABLE_QUADMATH=no
 else
@@ -27,7 +25,6 @@ mkdir build
 cd build
 
 cmake ${CMAKE_ARGS} \
-    -DCMAKE_CXX_STANDARD=17 \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
